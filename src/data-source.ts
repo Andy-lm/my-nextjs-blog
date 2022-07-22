@@ -9,7 +9,7 @@ export const AppDataSource = new DataSource({
     username: "blog",
     password: "",
     database: "blog_development",
-    synchronize: false,
+    synchronize: false, // 该值设置为false，避免我们在修改数据的时候导致一些数据被删除
     logging: false,
     entities: [User],
     migrations: [],
