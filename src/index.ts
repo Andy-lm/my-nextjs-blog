@@ -1,8 +1,9 @@
 import { AppDataSource } from "./data-source"
 import { User } from "./entity/User"
 
-AppDataSource.initialize().then(async () => {
-
+AppDataSource.initialize().then(async (connection) => {
+    console.log(connection,"======connection");
+    
     console.log("Inserting a new user into the database...")
     const user = new User()
     user.firstName = "Timber"
@@ -16,5 +17,5 @@ AppDataSource.initialize().then(async () => {
     console.log("Loaded users: ", users)
 
     console.log("Here you can setup and run express / fastify / any other framework.")
-
+    connection.close();
 }).catch(error => console.log(error))
