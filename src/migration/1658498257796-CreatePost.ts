@@ -3,7 +3,7 @@ import { MigrationInterface, QueryRunner, Table } from "typeorm";
 export class CreatePost1658498257796 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     // 升级数据库
-    return await queryRunner.createTable(
+    let res = await queryRunner.createTable(
       new Table({
         name: "posts",
         columns: [
@@ -22,6 +22,8 @@ export class CreatePost1658498257796 implements MigrationInterface {
         ],
       })
     );
+    console.log(res,"=====res");
+    return res;
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {

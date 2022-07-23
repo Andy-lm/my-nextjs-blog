@@ -26,6 +26,7 @@ var CreatePost1658498257796 = /*#__PURE__*/function () {
     key: "up",
     value: function () {
       var _up = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(queryRunner) {
+        var res;
         return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -49,9 +50,11 @@ var CreatePost1658498257796 = /*#__PURE__*/function () {
                 }));
 
               case 2:
-                return _context.abrupt("return", _context.sent);
+                res = _context.sent;
+                console.log(res, "=====res");
+                return _context.abrupt("return", res);
 
-              case 3:
+              case 5:
               case "end":
                 return _context.stop();
             }
