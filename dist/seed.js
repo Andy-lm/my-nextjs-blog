@@ -22,7 +22,7 @@ _dataSource.AppDataSource.initialize().then( /*#__PURE__*/function () {
 
           case 2:
             post = _context.sent;
-            console.log(post, "=====post1");
+            console.log(post, "=====post1"); // 如果数据库中没数据时我们通过seed给数据库添加一些自定义mock数据
 
             if (!(post.length === 0)) {
               _context.next = 12;

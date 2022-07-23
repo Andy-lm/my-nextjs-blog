@@ -1,5 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
+// migration用于迁移数据库，这是给数据库添加一个表
 export class CreatePost1658498257796 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     // 升级数据库

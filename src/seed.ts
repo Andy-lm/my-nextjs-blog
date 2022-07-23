@@ -5,6 +5,7 @@ AppDataSource.initialize()
   .then(async (connection) => {
     const post = await connection.manager.find(Post);
     console.log(post, "=====post1");
+    // 如果数据库中没数据时我们通过seed给数据库添加一些自定义mock数据
     if (post.length === 0) {
       for (let i = 1; i <= 10; i++) {
         await connection.manager.save(

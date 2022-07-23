@@ -17,6 +17,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _typeorm = require("typeorm");
 
+// migration用于迁移数据库，这是给数据库添加一个表
 var CreatePost1658498257796 = /*#__PURE__*/function () {
   function CreatePost1658498257796() {
     (0, _classCallCheck2["default"])(this, CreatePost1658498257796);
