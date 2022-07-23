@@ -9,8 +9,7 @@ require("reflect-metadata");
 
 var _typeorm = require("typeorm");
 
-var _User = require("./entity/User");
-
+// import { User } from "./entity/User"
 var AppDataSource = new _typeorm.DataSource({
   type: "postgres",
   host: "localhost",
@@ -19,9 +18,11 @@ var AppDataSource = new _typeorm.DataSource({
   password: "",
   database: "blog_development",
   synchronize: false,
+  // 该值设置为false，避免我们在修改数据的时候导致一些数据被删除
   logging: false,
-  entities: [_User.User],
-  migrations: [],
-  subscribers: []
+  entities: ["dist/entity/**/*.js"],
+  // entities: [User],
+  migrations: ["dist/migration/**/*.js"],
+  subscribers: ["dist/subscribers/**/*.js"]
 });
 exports.AppDataSource = AppDataSource;
