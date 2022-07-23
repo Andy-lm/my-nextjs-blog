@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "typeorm:build":"babel ./src --out-dir dist --extensions .ts,.tsx",
-    "migration:run":"typeorm migration:run -d ./dist/data-source.js",
-    "migration:revert":"typeorm migration:revert -d ./dist/data-source.js"
+    "m:create":"typeorm migration:create",
+    "m:run":"typeorm migration:run -d ./dist/data-source.js",
+    "m:revert":"typeorm migration:revert -d ./dist/data-source.js"
   },
   "dependencies": {
     "@babel/cli": "^7.18.9",
