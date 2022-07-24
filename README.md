@@ -38,7 +38,7 @@ psql -U blog
 ```bash
 CREATE DATABASE database_name ENCODING 'UTF8' LC_COLLATE 'en_US.utf8' LC_CTYPE 'en_US.utf8';
 ```
-注：为了区分开发、生产、测试环境，应将以上代码中的xxx换为blog_development、blog_production、blog_test执行三次
+注：为了区分开发、生产、测试环境，应将以上代码中的database_name换为blog_development、blog_production、blog_test执行三次
 
 6. 创建数据表
 ```bash
