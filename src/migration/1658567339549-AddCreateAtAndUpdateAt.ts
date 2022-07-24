@@ -1,21 +1,17 @@
-import {
-  MigrationInterface,
-  QueryRunner,
-  TableColumn,
-} from "typeorm";
+import { MigrationInterface, QueryRunner, TableColumn } from "typeorm";
 
 export class AddCreateAtAndUpdateAt1658567339549 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.addColumns("users", [
       new TableColumn({
         name: "createAt",
-        type: "time",
+        type: "timestamp",
         isNullable: false,
         default: "now()",
       }),
       new TableColumn({
         name: "updateAt",
-        type: "time",
+        type: "timestamp",
         isNullable: false,
         default: "now()",
       }),
@@ -23,13 +19,13 @@ export class AddCreateAtAndUpdateAt1658567339549 implements MigrationInterface {
     await queryRunner.addColumns("posts", [
       new TableColumn({
         name: "createAt",
-        type: "time",
+        type: "timestamp",
         isNullable: false,
         default: "now()",
       }),
       new TableColumn({
         name: "updateAt",
-        type: "time",
+        type: "timestamp",
         isNullable: false,
         default: "now()",
       }),
@@ -37,13 +33,13 @@ export class AddCreateAtAndUpdateAt1658567339549 implements MigrationInterface {
     await queryRunner.addColumns("comments", [
       new TableColumn({
         name: "createAt",
-        type: "time",
+        type: "timestamp",
         isNullable: false,
         default: "now()",
       }),
       new TableColumn({
         name: "updateAt",
-        type: "time",
+        type: "timestamp",
         isNullable: false,
         default: "now()",
       }),
