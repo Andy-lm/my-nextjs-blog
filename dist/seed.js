@@ -46,9 +46,10 @@ _dataSource.AppDataSource.initialize().then( /*#__PURE__*/function () {
             return manager.save(c1);
 
           case 19:
+            console.log("===数据生成完成，OK！");
             connection.close();
 
-          case 20:
+          case 21:
           case "end":
             return _context.stop();
         }
