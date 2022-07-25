@@ -16,7 +16,7 @@ export const AppDataSource = new DataSource({
   synchronize: false, // 该值设置为false，避免我们在修改数据的时候导致一些数据被删除
   logging: false,
   //   entities: ["dist/entity/**/*.js"],
-  entities: [Post, User, Comment],
+  entities: [Post, User, Comment], // 通过reflect-metadata就可以拿到Post、User、 Comment这些entity上的属性名、属性值类型
   migrations: ["dist/migration/**/*.js"],
   subscribers: ["dist/subscribers/**/*.js"],
 });

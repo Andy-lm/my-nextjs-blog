@@ -2,6 +2,7 @@ import { GetServerSideProps, NextPage } from "next";
 import { UAParser } from "ua-parser-js";
 import { useEffect, useState } from "react";
 import { getDatabaseConnection } from "../lib/getDatabaseConnection";
+import Link from "next/link";
 import { Post } from "src/entity/Post";
 
 type Props = {
@@ -23,13 +24,15 @@ const index: NextPage<Props> = (props) => {
 
   return (
     <div>
-      <span>你的浏览器是 {browser.name}</span>
-      <span>你的浏览器窗口大小是 {width} 像素</span>
+      <div>你的浏览器是 {browser.name}</div>
+      <div>你的浏览器窗口大小是 {width} 像素</div>
+      <h1>文章列表</h1>
       {posts.map((post) => {
         return (
           <div key={post.id}>
-            <h2>{post.title}</h2>
-            <div>{post.content}</div>
+            <Link href={`posts/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
           </div>
         );
       })}
